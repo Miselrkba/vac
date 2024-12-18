@@ -1,0 +1,78 @@
+{
+  "teams": ["Všetci používatelia"],
+  "users": [
+    {
+      "id": 1,
+      "name": "Matej Mazánik",
+      "role": "ADMINISTRÁTOR, MANAŽÉR, EKONÓM"
+    },
+    { "id": 2, "name": "Ján Novák", "role": "POUŽÍVATEĽ" },
+    { "id": 3, "name": "Mária Kováčová", "role": "MANAŽÉR" },
+    { "id": 4, "name": "Peter Horváth", "role": "PLATOVÝ MANAŽÉR" },
+    { "id": 5, "name": "Lucia Dubová", "role": "EKONÓM" },
+    { "id": 6, "name": "Štefan Černák", "role": "POUŽÍVATEĽ" },
+    { "id": 7, "name": "Veronika Slobodová", "role": "MANAŽÉR, POUŽÍVATEĽ" }
+  ],
+  "vacations": [
+    {
+      "submitted": "20.04.2016",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "16.06.2016",
+      "lastDay": "26.06.2016",
+      "days": 7.0,
+      "userId": 1,
+      "approvedByM": "Ján Novák",
+      "approvedByD": "-"
+    },
+    {
+      "submitted": "15.07.2022",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "20.07.2022",
+      "lastDay": "25.07.2022",
+      "days": 6.0,
+      "userId": 2,
+      "approvedByM": "Mária Kováčová",
+      "approvedByD": "-"
+    },
+    {
+      "submitted": "10.01.2021",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "15.01.2021",
+      "lastDay": "20.01.2021",
+      "days": 5.0,
+      "userId": 1,
+      "approvedByM": "Peter Horváth",
+      "approvedByD": "-"
+    },
+    {
+      "submitted": "05.08.2023",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "10.08.2023",
+      "lastDay": "12.08.2023",
+      "days": 3.0,
+      "userId": 3,
+      "approvedByM": "Lucia Dubová",
+      "approvedByD": "-"
+    },
+    {
+      "submitted": "15.09.2023",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "18.09.2023",
+      "lastDay": "22.09.2023",
+      "days": 5.0,
+      "userId": 4,
+      "approvedByM": "Matej Mazánik",
+      "approvedByD": "-"
+    },
+    {
+      "submitted": "25.10.2023",
+      "state": "SCHVÁLENÉ_MANAŽÉROM",
+      "firstDay": "01.11.2023",
+      "lastDay": "05.11.2023",
+      "days": 5.0,
+      "userId": 5,
+      "approvedByM": "Veronika Slobodová",
+      "approvedByD": "-"
+    }
+  ]
+}
