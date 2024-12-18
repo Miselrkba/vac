@@ -1,6 +1,6 @@
 # Holiday Booking App
 
-A web application for managing and displaying team vacations. Includes features like filtering by team and user, displaying vacation data, and adding new entries.
+A web application for managing and displaying team vacations. Includes features like filtering by user, displaying vacation data, and adding new entries.
 
 ---
 
