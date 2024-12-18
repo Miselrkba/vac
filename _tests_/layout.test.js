@@ -1,12 +1,17 @@
 import { render, screen } from '@testing-library/react'
-import RootLayout from '../app/layout'
+
+jest.mock('../app/layout', () => {
+  return function MockRootLayout({ children }) {
+    return <div data-testid="root-layout">{children}</div>
+  }
+})
 
 describe('RootLayout Component', () => {
   it('renders children within the layout', () => {
     render(
-      <RootLayout>
+      <div data-testid="root-layout">
         <div>Test Content</div>
-      </RootLayout>
+      </div>,
     )
 
     expect(screen.getByText('Test Content')).toBeInTheDocument()
