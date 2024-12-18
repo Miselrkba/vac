@@ -1,6 +1,9 @@
-export const Header = () => (
-  <div className="header">
-    <div>Vacation</div>
-    <div>Matej Mazánik</div>
-  </div>
-)
+const Header = ({ title }) => {
+  return (
+    <div className="header-arrow">
+      <span>{title}</span>
+    </div>
+  )
+}
+
+export default Header
