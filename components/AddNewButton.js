@@ -1,5 +1,5 @@
 export const AddNewButton = () => (
   <div className="add-new-button">
-    <button>ADD NEW</button>
+    <button>Add New</button>
   </div>
 )
