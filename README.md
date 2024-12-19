@@ -23,5 +23,4 @@ A web application for managing and displaying team vacations. Includes features 
 
 ## **How to Run Tests**
 
-    npm test
-    then press "a" to run all tests
+    npm test:coverage
