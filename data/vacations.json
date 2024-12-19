@@ -15,6 +15,7 @@
   ],
   "vacations": [
     {
+      "id": 1,
       "submitted": "20.04.2016",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "16.06.2016",
@@ -25,6 +26,7 @@
       "approvedByD": "-"
     },
     {
+      "id": 2,
       "submitted": "15.07.2022",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "20.07.2022",
@@ -35,6 +37,7 @@
       "approvedByD": "-"
     },
     {
+      "id": 3,
       "submitted": "10.01.2021",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "15.01.2021",
@@ -45,6 +48,7 @@
       "approvedByD": "-"
     },
     {
+      "id": 4,
       "submitted": "05.08.2023",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "10.08.2023",
@@ -55,6 +59,7 @@
       "approvedByD": "-"
     },
     {
+      "id": 5,
       "submitted": "15.09.2023",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "18.09.2023",
@@ -65,6 +70,7 @@
       "approvedByD": "-"
     },
     {
+      "id": 6,
       "submitted": "25.10.2023",
       "state": "SCHVÁLENÉ_MANAŽÉROM",
       "firstDay": "01.11.2023",

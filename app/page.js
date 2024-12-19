@@ -9,10 +9,11 @@ import VacationTable from '../components/VacationTable'
 import data from '../data/vacations.json'
 
 const Page = () => {
+  const [vacations, setVacations] = useState(data.vacations)
   const [filteredData, setFilteredData] = useState(data.vacations)
 
   const handleFilterChange = ({ user }) => {
-    let filteredVacations = data.vacations
+    let filteredVacations = vacations
 
     if (user !== 'Všetci používatelia') {
       const selectedUser = data.users.find((u) => u.name === user)
@@ -26,12 +27,22 @@ const Page = () => {
     setFilteredData(filteredVacations)
   }
 
+  const handleDelete = (id) => {
+    const updatedVacations = vacations.filter((vacation) => vacation.id !== id)
+    setVacations(updatedVacations)
+
+    const filteredVacations = updatedVacations.filter((vacation) =>
+      filteredData.includes(vacation),
+    )
+    setFilteredData(filteredVacations)
+  }
+
   return (
     <div className="container">
       <Header title="Vacation" />
       <Filter onFilterChange={handleFilterChange} />
       <AddNewButton />
-      <VacationTable vacations={filteredData} />
+      <VacationTable vacations={filteredData} onDelete={handleDelete} />
     </div>
   )
 }
