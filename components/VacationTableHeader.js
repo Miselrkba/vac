@@ -1,4 +1,4 @@
-export const VacationTableHeader = () => (
+const VacationTableHeader = () => (
   <thead>
     <tr>
       <th>Submitted</th>
@@ -12,3 +12,5 @@ export const VacationTableHeader = () => (
     </tr>
   </thead>
 )
+
+export default VacationTableHeader

@@ -14,3 +14,5 @@ export const VacationTableRow = ({ vacation }) => (
     </td>
   </tr>
 )
+
+export default VacationTableRow

@@ -3,15 +3,15 @@ import { useState } from 'react'
 import './globals.scss'
 import './styles.scss'
 import Header from '../components/Header'
-import { Filter } from '../components/Filter'
-import { AddNewButton } from '../components/AddNewButton'
-import { VacationTable } from '../components/VacationTable'
+import Filter from '../components/Filter'
+import AddNewButton from '../components/AddNewButton'
+import VacationTable from '../components/VacationTable'
 import data from '../data/vacations.json'
 
 const Page = () => {
   const [filteredData, setFilteredData] = useState(data.vacations)
 
-  const handleFilterChange = ({ user, team }) => {
+  const handleFilterChange = ({ user }) => {
     let filteredVacations = data.vacations
 
     if (user !== 'Všetci používatelia') {

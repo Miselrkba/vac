@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import data from '../data/vacations.json'
 
-export const Filter = ({ onFilterChange }) => {
+const Filter = ({ onFilterChange }) => {
   const [selectedUser, setSelectedUser] = useState('Všetci používatelia')
   const [selectedTeam, setSelectedTeam] = useState('Všetci používatelia')
   const [focusedUser, setFocusedUser] = useState({
@@ -68,3 +68,5 @@ export const Filter = ({ onFilterChange }) => {
     </div>
   )
 }
+
+export default Filter
