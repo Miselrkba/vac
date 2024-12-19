@@ -17,7 +17,7 @@ A web application for managing and displaying team vacations. Features include f
 ## **How to Run the Project**
 
     git clone https://github.com/Miselrkba/vacation.git
-    cd vac
+    cd vacation
     npm install
     npm run dev
 
