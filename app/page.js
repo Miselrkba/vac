@@ -27,21 +27,29 @@ const Page = () => {
     setFilteredData(filteredVacations)
   }
 
+  const handleAddVacation = (newVacation) => {
+    const newId =
+      vacations.length > 0 ? Math.max(...vacations.map((v) => v.id)) + 1 : 1
+    const vacationToAdd = {
+      id: newId,
+      ...newVacation,
+    }
+    const updatedVacations = [...vacations, vacationToAdd]
+    setVacations(updatedVacations)
+    setFilteredData(updatedVacations)
+  }
+
   const handleDelete = (id) => {
     const updatedVacations = vacations.filter((vacation) => vacation.id !== id)
     setVacations(updatedVacations)
-
-    const filteredVacations = updatedVacations.filter((vacation) =>
-      filteredData.includes(vacation),
-    )
-    setFilteredData(filteredVacations)
+    setFilteredData(updatedVacations)
   }
 
   return (
     <div className="container">
       <Header title="Vacation" />
       <Filter onFilterChange={handleFilterChange} />
-      <AddNewButton />
+      <AddNewButton onAddVacation={handleAddVacation} />
       <VacationTable vacations={filteredData} onDelete={handleDelete} />
     </div>
   )
