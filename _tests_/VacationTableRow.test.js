@@ -1,4 +1,4 @@
-import { VacationTableRow } from '@/components/VacationTableRow'
+import VacationTableRow from '@/components/VacationTableRow'
 import { render, screen } from '@testing-library/react'
 
 const vacation = {
@@ -29,13 +29,13 @@ describe('VacationTableRow Component', () => {
 
   it('renders fallback for missing fields', () => {
     const incompleteVacation = {
-      submitted: '', // Missing
-      state: '', // Missing
-      firstDay: '', // Missing
-      lastDay: '', // Missing
-      days: 0, // Missing (0 interpreted as falsy)
-      approvedByM: undefined, // Missing
-      approvedByD: null, // Missing
+      submitted: '',
+      state: '',
+      firstDay: '',
+      lastDay: '',
+      days: 0,
+      approvedByM: undefined,
+      approvedByD: null,
     }
 
     render(
@@ -46,8 +46,7 @@ describe('VacationTableRow Component', () => {
       </table>,
     )
 
-    // Check for multiple fallback '-' elements
     const fallbackElements = screen.getAllByText('-')
-    expect(fallbackElements.length).toBe(7) // Expect 6 fallbacks (including 'days')
+    expect(fallbackElements.length).toBe(7)
   })
 })

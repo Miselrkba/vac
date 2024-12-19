@@ -1,4 +1,4 @@
-import { Filter } from '@/components/Filter'
+import Filter from '@/components/Filter'
 import { render, screen, fireEvent } from '@testing-library/react'
 
 describe('Filter Component', () => {
@@ -15,11 +15,18 @@ describe('Filter Component', () => {
   it('triggers onFilterChange when dropdown values change', () => {
     render(<Filter onFilterChange={mockOnFilterChange} />)
 
-    fireEvent.change(screen.getByLabelText(/Teams:/i), { target: { value: 'Všetci používatelia' } })
-    fireEvent.change(screen.getByLabelText(/Users:/i), { target: { value: 'Matej Mazánik' } })
+    fireEvent.change(screen.getByLabelText(/Teams:/i), {
+      target: { value: 'Všetci používatelia' },
+    })
+    fireEvent.change(screen.getByLabelText(/Users:/i), {
+      target: { value: 'Matej Mazánik' },
+    })
 
     fireEvent.click(screen.getByRole('button', { name: /change/i }))
 
-    expect(mockOnFilterChange).toHaveBeenCalledWith({ team: 'Všetci používatelia', user: 'Matej Mazánik' })
+    expect(mockOnFilterChange).toHaveBeenCalledWith({
+      team: 'Všetci používatelia',
+      user: 'Matej Mazánik',
+    })
   })
 })
