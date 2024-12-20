@@ -28,13 +28,15 @@ const Page = () => {
   }
 
   const handleAddVacation = (newVacation) => {
-    const newId =
-      vacations.length > 0 ? Math.max(...vacations.map((v) => v.id)) + 1 : 1
+    const newId = vacations.length ? vacations[vacations.length - 1].id + 1 : 1
+
     const vacationToAdd = {
       id: newId,
       ...newVacation,
     }
+
     const updatedVacations = [...vacations, vacationToAdd]
+
     setVacations(updatedVacations)
     setFilteredData(updatedVacations)
   }
